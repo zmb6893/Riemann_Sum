@@ -24,6 +24,7 @@ def main():
 
         try:
             graph(expression, int(n), int(a), int(b), r_type)
+            print()
         except:
             print("Make sure you have entered valid entries for each input")
 
