@@ -94,7 +94,7 @@ def graph_rectangles(graph="x", n=1, a=0, b=1, r_type = "left"):
             rect = pa.Rectangle((x-(partition/2),0),partition,y, linewidth = 1, edgecolor="k", facecolor="g")
             ax.add_patch(rect)
 
-def graph(expression, n, a, b, r_type, accuracy):
+def graph(expression, n, a, b, r_type, accuracy = 50):
     '''
     Graphs the expression from a to b with labelled graph.
 
@@ -112,15 +112,7 @@ def graph(expression, n, a, b, r_type, accuracy):
     #graphs the expression and the rectangles
     graph_rectangles(expression, n, a, b, r_type)
     init_graph(expression, r_type, summed)
-    graph_curve(expression, a, b, accuracy = 50)
+    graph_curve(expression, a, b, accuracy)
 
-def main():
-    '''
-    main function
-    '''
-    expression = "x**2"
-    graph(expression, 5, 0, 10, "left", 50)
+    #displays the graph
     p.show()
-
-if __name__ == "__main__":
-    main()
